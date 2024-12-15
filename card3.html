@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cats</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #FFFAF4;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    h1 {
+      margin-top: 20px;
+      color: #A20A0A;
+      font-size: 24px;
+    }
+    .image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 images per row */
+  gap: 20px;
+  padding: 20px;
+}
+
+.image-grid img {
+  width: 450px; /* Ensures the image stretches across the grid cell */
+  height: 600px; /* Fixed height for uniformity */
+  object-fit: cover; /* Ensures images are cropped to fit */
+  border: 2px solid #ddd; /* Adds a light gray border */
+  border-radius: 8px; /* Rounds the corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Animation for hover effect */
+}
+@media screen and (max-width: 480px) {
+    .image-grid {
+        grid-template-columns: 1fr; /* 1 image per row on very small screens */
+    }
+
+    .image-grid img {
+        width: 100%; /* Images take up full width */
+        height: auto; /* Automatically adjust height */
+    }
+
+    h1 {
+        font-size: 20px; /* Smaller heading font size for small screens */
+    }
+}
+  </style>
+</head>
+<body>
+  <h1>⋆🐾°</h1>
+
+  <div class="image-grid">
+    <img src="pics/cat1.jpg" alt="Cat 1">
+    <img src="pics/cat2.png" alt="Cat 2">
+    <img src="pics/cat3.png" alt="Cat 3">
+    <img src="pics/cat4.jpg" alt="Cat 4">
+    <img src="pics/cat5.jpg" alt="Cat 5">
+    <img src="pics/cat6.png" alt="Cat 6">
+    <img src="pics/cat7.jpg" alt="Cat 7">
+    <img src="pics/cat8.jpg" alt="Cat 8">
+    <img src="pics/cat9.jpg" alt="Cat 9">
+    <img src="pics/cat10.jpg" alt="Cat 10">
+    <img src="pics/cat11.jpg" alt="Cat 11">
+    <img src="pics/cat12.png" alt="Cat 12">
+    <img src="pics/cat13.png" alt="Cat 13">
+    <img src="pics/cat14.jpg" alt="Cat 14">
+    <img src="pics/cat15.png" alt="Cat 15">
+    <img src="pics/cat16.png" alt="Cat 16">
+    <img src="pics/cat17.jpg" alt="Cat 17">
+    <img src="pics/cat18.jpg" alt="Cat 18">
+    <img src="pics/cat19.jpg" alt="Cat 19">
+    <img src="pics/cat20.jpg" alt="Cat 20">
+    <img src="pics/cat21.png" alt="Cat 21">
+    <img src="pics/cat22.png" alt="Cat 22">
+</div>
+
+</body>
+</html>

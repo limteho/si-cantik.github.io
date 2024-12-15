@@ -1,0 +1,222 @@
+body {
+  background-color: #FFFAF4;
+}
+
+/* Candle count display */
+.candle-count-display {
+  text-align: center;
+  margin-top: 130px;
+  margin-bottom: 20px;
+  font-family: Arial;
+  font-size: 20px;
+  color: #A20A0A;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.candle-count-display span {
+  font-weight: bold;
+  color: #AD030F;
+}
+
+/* Cake styling */
+.cake {
+  position: absolute;
+  width: 150px; /* Decrease width */
+  height: 120px; /* Decrease height */
+  top: 40%;
+  left: 50%;
+  margin-top: -60px;
+  margin-left: -75px;
+}
+
+.plate {
+  width: 180px; /* Smaller plate width */
+  height: 60px; /* Smaller plate height */
+  bottom: -40px; /* Adjust position */
+  left: -15px; /* Center the plate under the smaller cake */
+  background-color: #F5F5F5;
+  border-radius: 50%;
+  box-shadow: 0 2px 0 #b3b3b3, 0 4px 0 #b3b3b3, 0 5px 40px rgba(0, 0, 0, 0.5);
+}
+
+.cake > * {
+  position: absolute;
+}
+
+.layer {
+  position: absolute;
+  display: block;
+  width: 150px; /* Match smaller cake width */
+  height: 50px; /* Decrease height */
+  border-radius: 50%;
+  background-color: #D6C0B3;
+  box-shadow: 0 2px 0px #6a4b18, 0 4px 0px #33240b, 0 6px 0px #32230b, 0 8px 0px #31230b, 0 10px 0px #30220b, 0 12px 0px #2f220b, 0 14px 0px #2f210a, 0 16px 0px #2e200a, 0 18px 0px #2d200a, 0 20px 0px #2c1f0a, 0 22px 0px #2b1f0a, 0 24px 0px #2a1e09, 0 26px 0px #2a1d09, 0 28px 0px #291d09, 0 30px 0px #281c09;
+}
+
+.layer-top {
+  top: 0px;
+}
+
+.layer-middle {
+  top: 35px; /* Adjust spacing */
+}
+
+.layer-bottom {
+  top: 70px; /* Adjust spacing */
+}
+
+/* Position for the cats */
+#cat1, #cat2 {
+  position: absolute;
+  top: 40%;
+  transform: translateY(70%);
+  width: 130px; /* Adjust size as needed */
+}
+
+/* Position cat1 to the left of the cake */
+#cat1 {
+  left: 40%;
+}
+
+/* Position cat2 to the right of the cake */
+#cat2 {
+  right: 40%;
+}
+
+/* Candle styling */
+.candle {
+  background-color: #E72929;
+  width: 8px; /* Smaller candle */
+  height: 30px; /* Shorter candle */
+  border-radius: 6px / 3px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: 0px;
+  margin-top: -20px; /* Adjust position */
+  z-index: 10;
+}
+
+.candle:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 8px; /* Adjust cap size */
+  height: 4px;
+  border-radius: 50%;
+  background-color: #A91D3A;
+}
+
+.candle.out .flame {
+  display: none;
+}
+
+.flame {
+  position: absolute;
+  background-color: orange;
+  width: 10px; /* Smaller flame */
+  height: 20px; /* Shorter flame */
+  border-radius: 8px 8px 8px 8px/20px 20px 8px 8px;
+  top: -22px;
+  left: 52%;
+  margin-left: -7.5px;
+  z-index: 10;
+  box-shadow: 0 0 10px rgba(255, 165, 0, 0.5), 0 0 20px rgba(255, 165, 0, 0.5), 0 0 60px rgba(255, 165, 0, 0.5), 0 0 80px rgba(255, 165, 0, 0.5);
+  transform-origin: 50% 90%;
+  animation: flicker 1s ease-in-out alternate infinite;
+}
+
+@keyframes flicker {
+  0% {
+    transform: skewX(5deg);
+    box-shadow: 0 0 10px rgba(255, 165, 0, 0.2), 0 0 20px rgba(255, 165, 0, 0.2), 0 0 60px rgba(255, 165, 0, 0.2), 0 0 80px rgba(255, 165, 0, 0.2);
+  }
+  25% {
+    transform: skewX(-5deg);
+    box-shadow: 0 0 10px rgba(255, 165, 0, 0.5), 0 0 20px rgba(255, 165, 0, 0.5), 0 0 60px rgba(255, 165, 0, 0.5), 0 0 80px rgba(255, 165, 0, 0.5);
+  }
+  50% {
+    transform: skewX(10deg);
+    box-shadow: 0 0 10px rgba(255, 165, 0, 0.3), 0 0 20px rgba(255, 165, 0, 0.3), 0 0 60px rgba(255, 165, 0, 0.3), 0 0 80px rgba(255, 165, 0, 0.3);
+  }
+  75% {
+    transform: skewX(-10deg);
+    box-shadow: 0 0 10px rgba(255, 165, 0, 0.4), 0 0 20px rgba(255, 165, 0, 0.4), 0 0 60px rgba(255, 165, 0, 0.4), 0 0 80px rgba(255, 165, 0, 0.4);
+  }
+  100% {
+    transform: skewX(5deg);
+    box-shadow: 0 0 10px rgba(255, 165, 0, 0.5), 0 0 20px rgba(255, 165, 0, 0.5), 0 0 60px rgba(255, 165, 0, 0.5), 0 0 80px rgba(255, 165, 0, 0.5);
+  }
+}
+
+/* Responsive Design for Mobile */
+@media screen and (max-width: 768px) {
+  /* Adjust cake, plate, and other elements for smaller screens */
+  .cake {
+    width: 120px; /* Smaller cake width */
+    height: 100px; /* Smaller cake height */
+    top: 40%;
+    margin-top: -50px;
+    margin-left: -60px;
+  }
+
+  .plate {
+    width: 150px; /* Smaller plate */
+    height: 50px;
+    bottom: -50px;
+    left: -15px;
+  }
+
+  .layer {
+    width: 120px; /* Adjust layer width */
+    height: 40px; /* Adjust layer height */
+  }
+
+  .layer-top {
+    top: 0px;
+  }
+
+  .layer-middle {
+    top: 35px;
+  }
+
+  .layer-bottom {
+    top: 70px;
+  }
+
+  /* Position cats closer to the cake */
+  #cat1, #cat2 {
+    width: 100px; /* Smaller cats */
+    top: 50%;
+  }
+/* Position cat1 to the left of the cake */
+#cat1 {
+  left: 10%;
+}
+
+/* Position cat2 to the right of the cake */
+#cat2 {
+  right: 10%;
+}
+
+  /* Adjust candle size and flame */
+  .candle {
+    width: 6px;
+    height: 25px;
+    margin-top: -15px;
+  }
+
+  .candle:before {
+    width: 7px; /* Adjust cap size */
+    height: 4px;
+  }
+
+  .flame {
+    width: 8px;
+    height: 15px;
+    margin-left: -6px;
+  }
+}

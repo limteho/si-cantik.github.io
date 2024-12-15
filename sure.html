@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>≽^- ˕ -^≼</title>
+    <link rel="stylesheet" href="sure.css" />
+  </head>
+  <body>
+    <div id="thankyou"><b>Are you sure ?</b></div>
+    <img id="huh" src="gif/huh.gif" alt="rizzler god" class="responsive" />
+    <br />
+    <button class="button" onclick="location.href='gifts.html'">
+      Yes
+    </button>
+    <button class="button" id="noButton">
+      No
+    </button>
+
+    <script>
+      const noButton = document.getElementById('noButton');
+
+      // Function to move the "No" button to a random position
+      function moveButton() {
+        const randomX = Math.floor(Math.random() * (window.innerWidth - 100)); // Ensure it stays within the viewport
+        const randomY = Math.floor(Math.random() * (window.innerHeight - 50));
+        noButton.style.position = 'absolute';
+        noButton.style.left = `${randomX}px`;
+        noButton.style.top = `${randomY}px`;
+      }
+
+      // Add event listeners to move the button on hover or click
+      noButton.addEventListener('mouseenter', moveButton);
+      noButton.addEventListener('click', moveButton);
+    </script>
+  </body>
+</html>

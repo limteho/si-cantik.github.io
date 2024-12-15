@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lilies</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #FFFAF4;
+        }
+        .postcard {
+            display: flex;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            overflow: hidden;
+            width: 570px;
+            height: 350px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .image {
+            width: 50%;
+        }
+        .image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .message {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            color: #333;
+            font-size: 18px;
+            padding: 50px;
+            text-align: left;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        .message.visible {
+            opacity: 1;
+        }
+
+        /* Responsive Design for Mobile */
+@media screen and (max-width: 768px) {
+    .postcard {
+        display: flex;
+        flex-direction: column; /* Change layout to column */
+        align-items: center; /* Optional: Center items horizontally */
+        justify-content: center; /* Optional: Center items vertically */
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        overflow: hidden;
+        width: 70%; /* Adjust width to fit smaller screens */
+        max-width: 500px; /* Maintain max width */
+        height: auto; /* Allow height to adjust dynamically */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .image {
+        width: 100%; /* Full width for the image on mobile */
+        height: 270px; /* Adjust the height of the image */
+    }
+
+    .message {
+        width: 90%; /* Full width for the message */
+        padding: 25px; /* Less padding for smaller screens */
+        font-size: 12px; /* Slightly smaller font size */
+        text-align: justify;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="postcard">
+        <div class="image">
+            <img src="pics/bunga.png" alt="Flower">
+        </div>
+        <div class="message" id="birthdayMessage">
+            <p>
+                To the one who loves lilies the most, <br>
+                <br>
+                These lilies are my way of wishing you a happy birthday.
+                May all your dreams come true, and may this small gift bring a smile to your face (˶ᵔ ᵕ ᵔ˶)
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Display the message after 2 seconds
+        window.onload = function() {
+            setTimeout(() => {
+                document.getElementById('birthdayMessage').classList.add('visible');
+            }, 1000);
+        };
+    </script>
+</body>
+</html>

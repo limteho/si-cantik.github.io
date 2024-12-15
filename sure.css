@@ -1,0 +1,66 @@
+body {
+  text-align: center;
+  margin-top: 50px;
+  font-family: "Arial";
+  background-color: #FFFAF4;
+  color: #A20A0A;
+}
+
+#thankyou {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+#huh {
+  height: 250px; /* Adjust height */
+  width: auto;   /* Maintain aspect ratio */
+  margin-bottom: 10px;
+}
+
+.button {
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  margin: 10px;
+  font-family: "Arial";
+  margin-bottom: 20px;
+  background-color: #FFFAF4;
+  color: #A20A0A;
+  border-radius: 12px;
+  border: 2px solid #ffe3e1;
+  box-shadow: 1px 1px 2px #A73121;
+  transition: 0.3s;
+}
+
+.button:hover {
+  background-color: #A73121;
+  color: #ffe3e1;
+  border: 2px solid #A73121;
+  box-shadow: 1px 1px 2px #ffe3e1;
+}
+
+/* Responsive Design for Mobile */
+@media screen and (max-width: 768px) {
+  body {
+    margin-top: 200px;
+    font-size: 18px; /* Smaller text for mobile */
+
+  }
+
+  #thankyou {
+    font-size: 20px; /* Smaller font size for heading */
+  }
+
+  #huh {
+    height: 150px; /* Reduce image size */
+    width: auto; /* Maintain aspect ratio */
+    text-align: center;
+  }
+
+  .button {
+    font-size: 16px; /* Reduce button text size */
+    padding: 8px 15px; /* Adjust padding */
+    width: 30%; /* Make buttons stretch across most of the screen */
+    margin: 10px auto; /* Center buttons */
+  }
+}

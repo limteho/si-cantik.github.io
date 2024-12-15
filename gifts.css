@@ -1,0 +1,95 @@
+body {
+    text-align: center;
+    margin-top: 50px;
+    font-family: "arial";
+    background-color: #FFFAF4;
+    color: #A20A0A;
+    display: flex;
+    flex-direction: column;
+  }
+  h1 {
+    font-size: 30px;
+  }
+  
+  /* Container for the cards */
+  .card-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 20px; /* Spacing between the cards */
+    padding: 50px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Style for each individual card */
+  .card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 300px; /* Adjust the width of each card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Hover effect for the card */
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Image inside the card */
+  .card-img {
+    width: 50%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  /* Content inside the card */
+  .card-content {
+    padding: 15px;
+  }
+  
+  /* Heading and text inside the card */
+  .card-content h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .card-content p {
+    font-size: 14px;
+    color: #666;
+  }
+
+/* Responsive Design for Mobile */
+@media screen and (max-width: 768px) {
+  .card-container {
+    flex-direction: column; /* Stack cards vertically */
+    align-items: center; /* Center cards in the container */
+    padding: 20px; /* Reduce padding */
+    gap: 20px; /* Adjust spacing between cards */
+  }
+
+  .card {
+    width: 80%; /* Make cards take up most of the screen width */
+    max-width: 400px; /* Set a maximum width for larger phones */
+  }
+  .card-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  h1 {
+    font-size: 20px; /* Adjust heading size */
+  }
+
+  .card-content h3 {
+    font-size: 16px; /* Adjust heading size inside cards */
+  }
+
+  .card-content p {
+    font-size: 12px; /* Adjust text size inside cards */
+  }
+}

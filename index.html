@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>≽^- ˕ -^≼</title>
+    <link rel="stylesheet" href="question.css" />
+    <script>
+      // This is where you can write your JavaScript code
+      alert("This webpage is created with you in mind")
+      alert("I hope you like it :>");
+  </script>
+  </head>
+  <body>
+    
+   
+    <div id="valentineQuestion"><b>Would you like to accept the gifts?</b></div>
+    <img src="gif/pleading.gif" alt="cat asking question" class="responsive" />
+    <br>
+    <button class="answerButton" onclick="location.href='sure.html'">
+      Yes
+    </button>
+    <button class="answerButton" id="noButton">No!</button>
+   
+
+    <script>
+      document
+        .getElementById("noButton")
+        .addEventListener("click", function () {
+          var yesButton = document.querySelector(
+            'button[onclick*="sure.html"]'
+          );
+          var currentFontSize = parseInt(
+            window.getComputedStyle(yesButton).fontSize
+          );
+          yesButton.style.fontSize = currentFontSize + 10 + "px"; // Increase font size by 5px
+        });
+    </script>
+  </body>
+</html>
